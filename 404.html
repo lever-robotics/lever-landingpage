@@ -8,8 +8,11 @@
         // Single Page Apps for GitHub Pages
         // MIT License
         // https://github.com/rafgraph/spa-github-pages
-        var segmentCount = 1; // Adjust this value based on your repo name (0 for custom domain, 1 for username.github.io/repo-name)
         var l = window.location;
+
+        // Check if we're on the custom domain
+        var isCustomDomain = l.hostname === 'lever-ai.com';
+        var segmentCount = isCustomDomain ? 0 : 1;
 
         // Redirect to the homepage with the path in the query string
         var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
