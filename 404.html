@@ -5,14 +5,25 @@
     <meta charset="utf-8">
     <title>Lever AI</title>
     <script type="text/javascript">
-        // Simple redirect to home page
-        window.location.href = 'https://lever-ai.com';
+        (function () {
+            // Get the current path
+            var path = window.location.pathname;
+
+            // Only redirect for known routes
+            if (path === '/articles/knowledge-graphs') {
+                // Redirect to index.html with the path as a parameter
+                window.location.href = 'https://lever-ai.com/?p=' + path;
+            } else {
+                // For unknown routes, redirect to home
+                window.location.href = 'https://lever-ai.com';
+            }
+        })();
     </script>
 </head>
 
 <body>
     <h1>Page Not Found</h1>
-    <p>Redirecting to home page...</p>
+    <p>Redirecting...</p>
     <p>If you are not redirected, <a href="https://lever-ai.com">click here</a>.</p>
 </body>
 

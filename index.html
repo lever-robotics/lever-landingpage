@@ -3,6 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Single Page App Routing Fix -->
+  <script type="text/javascript">
+    (function () {
+      // Only run in production
+      if (window.location.hostname === 'lever-ai.com') {
+        // Redirect to the correct route if coming from 404.html
+        if (window.location.search.includes('?p=')) {
+          var redirectPath = window.location.search.split('?p=')[1];
+          window.history.replaceState(null, null, redirectPath);
+        }
+      }
+    })();
+  </script>
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
