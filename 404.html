@@ -5,29 +5,12 @@
     <meta charset="utf-8">
     <title>Lever AI</title>
     <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        var l = window.location;
-
-        // Check if we're on the custom domain
-        var isCustomDomain = l.hostname === 'lever-ai.com';
-        var segmentCount = isCustomDomain ? 0 : 1;
-
-        // Redirect to the homepage with the path in the query string
-        var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-            l.pathname.slice(1).split('/').slice(segmentCount).join('/') +
-            (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash;
-
-        window.location.replace(redirectUrl);
+        window.location.replace('/');
     </script>
 </head>
 
 <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, click <a href="/">here</a>.</p>
+    <p>Redirecting to home page...</p>
 </body>
 
 </html>
