@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Content Directory Debug</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        .file-list {
+            margin-top: 20px;
+        }
+
+        .file-item {
+            padding: 5px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Content Directory Debug</h1>
+    <div class="file-list">
+        <h2>Attempting to fetch files:</h2>
+        <div id="files"></div>
+    </div>
+
+    <script>
+        async function checkFiles() {
+            const files = ['knowledge-graphs.md', 'articles.json'];
+            const filesDiv = document.getElementById('files');
+
+            for (const file of files) {
+                try {
+                    const response = await fetch(`/content/${file}`);
+                    const status = response.ok ? 'Available' : 'Not Found';
+                    const size = response.ok ? (await response.text()).length : 'N/A';
+
+                    filesDiv.innerHTML += `
+                        <div class="file-item">
+                            <strong>${file}</strong>: ${status} 
+                            (Status: ${response.status}, Size: ${size} bytes)
+                        </div>
+                    `;
+                } catch (error) {
+                    filesDiv.innerHTML += `
+                        <div class="file-item">
+                            <strong>${file}</strong>: Error - ${error.message}
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        checkFiles();
+    </script>
+</body>
+
+</html>
