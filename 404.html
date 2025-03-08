@@ -5,12 +5,26 @@
     <meta charset="utf-8">
     <title>Lever AI</title>
     <script type="text/javascript">
-        window.location.replace('/');
+        // Single Page Apps for GitHub Pages
+        // MIT License
+        // https://github.com/rafgraph/spa-github-pages
+        var segmentCount = 1; // Adjust this value based on your repo name (0 for custom domain, 1 for username.github.io/repo-name)
+        var l = window.location;
+
+        // Redirect to the homepage with the path in the query string
+        var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+            l.pathname.slice(1).split('/').slice(segmentCount).join('/') +
+            (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash;
+
+        window.location.replace(redirectUrl);
     </script>
 </head>
 
 <body>
-    <p>Redirecting to home page...</p>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, click <a href="/">here</a>.</p>
 </body>
 
 </html>
