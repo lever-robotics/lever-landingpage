@@ -4,7 +4,7 @@ description: A deep dive into how knowledge graphs power modern business intelli
 date: 2024-03-20
 author: Lever AI Team
 category: Technology
-image: /lever-landingpage/images/example.jpg
+image: /images/example.jpg
 ---
 
 # Knowledge Graphs for Business: Transforming Data into Actionable Insights with Lever
@@ -19,7 +19,7 @@ At its core, a knowledge graph is a structured representation of data that focus
 
 This structure allows for a more natural way of modeling real-world scenarios and complex systems. For example, in a business context, a knowledge graph might connect customers, products, sales representatives, and support tickets, creating a web of information that mirrors the actual relationships within the organization.
 
-![Knowledge Graph Overview](/lever-landingpage/images/knowledge_example.png)
+![Knowledge Graph Overview](/images/knowledge_example.png)
 
 ### Key Components of Knowledge Graphs
 
@@ -28,7 +28,7 @@ This structure allows for a more natural way of modeling real-world scenarios an
 - Labels: Providing contextual information to nodes and edges.
 
 
-![Business Value](/lever-landingpage/images/Example2.png)
+![Business Value](/images/Example2.png)
 
 
 
